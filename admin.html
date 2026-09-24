@@ -33,6 +33,32 @@
 </div></div>
 <script src="admin-config.js"></script>
 <div class="wrap" id="app"></div>
+<div id="adminGate" class="adminGate">
+  <form class="gateCard" onsubmit="unlockAdmin(event)">
+    <div class="gateLogo brandMark">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path d="M18 35h28M22 27h20M26 19h12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <h2>Admin Access</h2>
+    <p>Enter your private admin access key to open the Meerut Deals control center.</p>
+
+    <input
+      id="adminKeyInput"
+      class="gateInput"
+      type="password"
+      autocomplete="current-password"
+      placeholder="Admin access key"
+      required
+    >
+
+    <button class="gateBtn" type="submit">Unlock Admin Panel</button>
+
+    <div id="gateErr" class="gateErr"></div>
+  </form>
+</div>
 <div id="inspectScreen" class="screen hidden"></div>
 <div id="chatScreen" class="chatScreen hidden"></div>
 <div id="toast" class="toast"></div>
